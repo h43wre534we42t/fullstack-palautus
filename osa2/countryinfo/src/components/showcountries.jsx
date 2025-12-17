@@ -60,7 +60,7 @@ const ShowCountries = ({countryNames, country, setCountry}) => {
         <img src={countryData.flags.png} alt={countryData.flags.alt} width="300"></img>
         <h1>Capital weather</h1>
         <div>
-            Temperature {countryWeather.main.temp} celsies
+            Temperature {countryWeather.main.temp} celsius
             <img src={`https://openweathermap.org/img/wn/${countryWeather.weather[0].icon}@2x.png`} />
         </div>
       </div>

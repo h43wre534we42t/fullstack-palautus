@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { createLogger } from 'vite'
 
 const App = () => {
   const anecdotes = [
