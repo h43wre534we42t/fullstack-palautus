@@ -1,13 +1,25 @@
 get http://localhost:3001/info
 
 ###
-delete http://localhost:3001/api/persons/82901
+get http://localhost:3001/api/persons/69456e2d693a3ba93cbdfdbd
+
+###
+delete http://localhost:3001/api/persons/694579a8ee13a09b831bb45b
 
 ###
 post http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "Liisa Marttinen",
-    "number": "045044444"
+    "name": "Viktor",
+    "number": "444"
+}
+
+###
+put http://localhost:3001/api/persons/6945868a9f3fd0c7c6b83fcf
+Content-Type: application/json
+
+{
+    "name": "Viktor",
+    "number": "4444"
 }

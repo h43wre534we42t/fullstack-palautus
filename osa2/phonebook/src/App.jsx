@@ -9,6 +9,7 @@ const App = () => {
     personService
       .getAll()
       .then(response => {
+        console.log(response.data)
         setPersons(response.data)
       })
   }, [])
@@ -117,7 +118,7 @@ const Filter = ({value, onChange}) => {
 }
 
 const ShowPeople = ({ persons, filter, deletePerson }) => {
-  const filtered = persons.filter(person => person.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
+  const filtered = persons.filter(person => (person.name || '').toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
   return (
     filtered.map(person => <p key={person.name}>{person.name} {person.number} <DeleteButton deletePerson={deletePerson} id={person.id} /> </p>)
   )
