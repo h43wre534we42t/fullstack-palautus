@@ -16,7 +16,14 @@ const App = () => {
   const deletePerson = (id) => {
     personService
       .deletePerson(id)
-      .then(() => setPersons(persons.filter(person => person.id !== id)))
+      .then(() =>  {
+        const personToBeDeleted = persons.find(person => person.id === id)
+        setPersons(persons.filter(person => person.id !== id))
+        setNotification([`${personToBeDeleted.name} has been deleted`, 'red'])
+        setTimeout(() => {
+          setNotification([null, 'yellow'])
+        }, 5000)
+      })
       .catch(error => {
         setNotification([`They have already been deleted`, 'red'])
         setTimeout(() => {
@@ -65,6 +72,12 @@ const App = () => {
           }, 5000)
           setNewName('')
           setNewNumber('')
+        })
+        .catch(error => {
+          setNotification([error.response.data.error , 'red'])
+          setTimeout(() => {
+            setNotification([null, 'yellow'])
+          }, 5000)
         })
     }
   }
