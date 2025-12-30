@@ -1,0 +1,40 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+	"title": "Test Delete4",
+	"author": "John Baldur",
+	"url": "URL",
+	"likes": 1,
+	"userId": "6953ce67887868f44e0380b8"
+}
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+	"username": "ARrr",
+	"name": "John Baldur",
+	"password": "123"
+}
+
+###
+GET http://localhost:3003/api/users
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "ARrr",
+  "password": "123"
+}
+
+###
+DELETE http://localhost:3003/api/blogs/6953f1705a3b51b6f72f419f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdhbWVyIiwiaWQiOiI2OTUzY2U2Nzg4Nzg2OGY0NGUwMzgwYjgiLCJpYXQiOjE3NjcxMDA2NTB9.fI1jYpEezWZIokfSHFtQD0FmSw1zyXuSVMY01LR8Y_I
