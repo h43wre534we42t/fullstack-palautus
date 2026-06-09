@@ -9,6 +9,13 @@ const Wrapper = styled.section`
   text-align: center;
 `
 
+const StyledLink = styled(Link)`
+  &:hover {
+    color: purple;
+  }
+`
+
+
 const BlogList = ({ blogs }) => {
   return (
     <Wrapper>
@@ -19,7 +26,7 @@ const BlogList = ({ blogs }) => {
       </div>
       {blogs.map(blog =>
         <li key={blog.id}>
-          <Link to={`/blogs/${blog.id}`}>{blog.title} by {blog.author}</Link>
+          <StyledLink to={`/blogs/${blog.id}`}>{blog.title} by {blog.author}</StyledLink>
         </li>
       )}
     </Wrapper>

@@ -18,6 +18,11 @@ const Button = styled.button`
     color: grey;
   }
 `
+const Link = styled.a`
+  &:hover {
+    color: purple;
+  }
+`
 
 const BlogView = ({ blog, userid, handleLike, handleRemove, onNavigate }) => {
   const owner = userid ? userid === blog.user.id : false
@@ -59,7 +64,7 @@ const BlogView = ({ blog, userid, handleLike, handleRemove, onNavigate }) => {
         </div>
       </div>
 
-      <div>{blog.url}</div>
+      <Link href={blog.url}>{blog.url}</Link>
       <div>{blog.user.name}</div>
 
       <div>{owner && <Button onClick={onRemoval} $color='crimson'>remove</Button>}</div>
