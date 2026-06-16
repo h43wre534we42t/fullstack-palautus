@@ -1,0 +1,12 @@
+{
+  "anecdotes": [
+    {
+      "content": "yeah it works",
+      "author": "I did it ",
+      "info": "awdawd",
+      "votes": 0,
+      "id": "kZccUrIIUiE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
