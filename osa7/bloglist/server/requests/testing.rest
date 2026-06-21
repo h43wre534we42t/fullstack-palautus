@@ -1,0 +1,48 @@
+POST http://localhost:3003/api/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdhbWVyIiwiaWQiOiI2OTUzY2U2Nzg4Nzg2OGY0NGUwMzgwYjgiLCJpYXQiOjE3NjcxMDA2NTB9.fI1jYpEezWZIokfSHFtQD0FmSw1zyXuSVMY01LR8Y_I
+Content-Type: application/json
+
+{
+	"title": "A",
+	"author": "Frank Baldur",
+	"url": "URL",
+	"likes": 17,
+	"user": "6953ce67887868f44e0380b8"
+}
+###
+PUT http://localhost:3003/api/blogs/6a184af11b1df1ffe3629cb5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdhbWVyIiwiaWQiOiI2OTUzY2U2Nzg4Nzg2OGY0NGUwMzgwYjgiLCJpYXQiOjE3NjcxMDA2NTB9.fI1jYpEezWZIokfSHFtQD0FmSw1zyXuSVMY01LR8Y_I
+Content-Type: application/json
+
+{
+	"likes": 17
+}
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+	"username": "guy",
+	"name": "Test Tester",
+	"password": "321"
+}
+
+###
+GET http://localhost:3003/api/users
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "ARrr",
+  "password": "123"
+}
+
+###
+DELETE http://localhost:3003/api/blogs/6a19602aeba1b34c4ccb5c1b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkdhbWVyIiwiaWQiOiI2OTUzY2U2Nzg4Nzg2OGY0NGUwMzgwYjgiLCJpYXQiOjE3NjcxMDA2NTB9.fI1jYpEezWZIokfSHFtQD0FmSw1zyXuSVMY01LR8Y_I

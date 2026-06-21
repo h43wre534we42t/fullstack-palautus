@@ -1,0 +1,13 @@
+{
+  // Folder-specific settings
+  //
+  // For a full list of overridable settings, and general information on folder-specific settings,//zed.dev/docs/configuring-zed#settings-files
+  "prettier": {
+    "semi": false,
+    "allowed": true,
+    "tabWidth": 2,
+    "bracketSpacing": true,
+    "jsxSingleQuote": true,
+    "singleQuote": true,
+  },
+}
